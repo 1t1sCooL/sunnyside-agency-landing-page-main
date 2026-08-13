@@ -1,0 +1,156 @@
+.feature {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.feature__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.feature__text {
+  padding-top: 158px;
+}
+
+.feature__content {
+  max-width: 445px;
+}
+
+.feature--transform .feature__content {
+  margin-left: 166px;
+}
+
+.feature--stand-out .feature__content {
+  margin-left: 111px;
+}
+
+.feature__content h2 {
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 1.25;
+}
+
+.feature__content p {
+  margin-top: 28px;
+  color: var(--Grey-550);
+  font-size: 18px;
+  line-height: 1.67;
+}
+
+.feature__content .learn-more {
+  margin-top: 13px;
+}
+
+/* Learn more link with thick underline highlight */
+.learn-more {
+  position: relative;
+  display: inline-block;
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--Grey-950);
+  padding: 0 8px;
+}
+
+.learn-more::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -3px;
+  height: 10px;
+  border-radius: 28px;
+  z-index: -1;
+  transition: opacity 0.25s ease;
+}
+
+.learn-more--yellow::after {
+  background-color: var(--Yellow-500);
+  opacity: 0.25;
+}
+
+.learn-more--red::after {
+  background-color: var(--Red-400);
+  opacity: 0.25;
+}
+
+.learn-more:hover::after,
+.learn-more:focus::after {
+  opacity: 1;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 767px) {
+  .feature {
+    grid-template-columns: 1fr;
+  }
+
+  /* image first on mobile for the transform section it's already after text in DOM */
+  .feature--transform .feature__image {
+    order: -1;
+  }
+
+  .feature__text {
+    text-align: center;
+  }
+
+  .feature--transform .feature__text {
+    padding: 59px 7px 149px;
+  }
+
+  .feature--stand-out .feature__text {
+    padding: 59px 7px 66px;
+  }
+
+  .feature--transform .feature__content,
+  .feature--stand-out .feature__content {
+    max-width: 361px;
+    margin: 0 auto;
+  }
+
+  .feature__content h2 {
+    font-size: 32px;
+    max-width: 330px;
+    margin-inline: auto;
+  }
+
+  .feature--transform .feature__content p {
+    max-width: 360px;
+    margin-inline: auto;
+  }
+
+  .feature--stand-out .feature__content p {
+    max-width: 330px;
+    margin-inline: auto;
+  }
+
+  .feature__content p {
+    font-size: 18px;
+  }
+
+  .feature--transform .feature__content p {
+    margin-top: 55px;
+  }
+
+  .feature--stand-out .feature__content p {
+    margin-top: 28px;
+  }
+
+  .feature--transform .feature__content .learn-more {
+    margin-top: 29px;
+  }
+
+  .feature--stand-out .feature__content .learn-more {
+    margin-top: 33px;
+  }
+
+  /* the mobile design crops the stand-out photo to a 239px band */
+  .feature--stand-out .feature__image img {
+    width: 100%;
+    height: 239px;
+    object-fit: cover;
+  }
+}

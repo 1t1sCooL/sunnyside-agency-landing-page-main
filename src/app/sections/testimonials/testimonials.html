@@ -1,0 +1,16 @@
+<section class="testimonials">
+  <h2 class="testimonials__heading">Client testimonials</h2>
+
+  <div class="testimonials__grid">
+    @for (t of testimonials; track t.name) {
+      <figure class="testimonial">
+        <img class="testimonial__avatar" [src]="t.avatar" [alt]="t.name" width="72" height="72" />
+        <blockquote class="testimonial__quote">{{ t.quote }}</blockquote>
+        <figcaption>
+          <p class="testimonial__name">{{ t.name }}</p>
+          <p class="testimonial__role">{{ t.role }}</p>
+        </figcaption>
+      </figure>
+    }
+  </div>
+</section>

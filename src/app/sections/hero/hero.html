@@ -1,0 +1,40 @@
+<header class="hero">
+  <picture class="hero__bg" aria-hidden="true">
+    <source media="(min-width: 768px)" srcset="images/desktop/image-header.jpg" />
+    <img src="images/mobile/image-header.jpg" alt="" />
+  </picture>
+
+  <nav class="nav">
+    <a href="#" class="nav__logo" aria-label="Sunnyside home">
+      <img src="images/logo.svg" alt="sunnyside" width="170" height="33" />
+    </a>
+
+    <button
+      class="nav__burger"
+      aria-label="Toggle menu"
+      [attr.aria-expanded]="menuOpen()"
+      (click)="toggleMenu()"
+    >
+      <img src="images/icon-hamburger.svg" alt="" width="24" height="18" />
+    </button>
+
+    <ul class="nav__links" [class.is-open]="menuOpen()">
+      <li><a href="#" (click)="closeMenu()">About</a></li>
+      <li><a href="#" (click)="closeMenu()">Services</a></li>
+      <li><a href="#" (click)="closeMenu()">Projects</a></li>
+      <li>
+        <a href="#" class="nav__contact" (click)="closeMenu()">Contact</a>
+      </li>
+    </ul>
+  </nav>
+
+  <h1 class="hero__title">We are creatives</h1>
+
+  <img
+    class="hero__arrow"
+    src="images/icon-arrow-down.svg"
+    alt=""
+    width="36"
+    height="114"
+  />
+</header>

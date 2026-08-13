@@ -1,0 +1,71 @@
+:root {
+  --Red-400: hsl(7, 99%, 70%);
+  --Yellow-500: hsl(51, 100%, 49%);
+  --Green-800: hsl(167, 40%, 24%);
+  --Blue-800: hsl(198, 62%, 26%);
+  --Green-500: hsl(167, 34%, 41%);
+  --Grey-950: hsl(212, 27%, 19%);
+  --Grey-600: hsl(213, 9%, 39%);
+  --Grey-550: hsl(232, 10%, 55%);
+  --Grey-400: hsl(210, 4%, 67%);
+  --White: hsl(0, 100%, 100%);
+  --Sky-400: hsl(200, 100%, 62%);
+  --Footer-bg: hsl(168, 44%, 70%);
+  --FontSize: 18px;
+}
+
+/* @font-face declared in index.html so relative font URLs respect <base href> on deploy */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: var(--FontSize);
+  color: var(--Grey-600);
+  background-color: hsl(26, 100%, 99%);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Fraunces", serif;
+  color: var(--Grey-950);
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}

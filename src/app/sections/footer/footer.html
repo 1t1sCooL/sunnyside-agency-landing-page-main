@@ -1,0 +1,32 @@
+<footer class="footer" [class.in-view]="inView()">
+  <div class="footer__glow" aria-hidden="true"></div>
+
+  <a href="#" class="footer__logo" aria-label="Sunnyside home">
+    <span class="footer__logo-mask" [style.--logo]="'url(images/logo.svg)'"></span>
+  </a>
+
+  <nav class="footer__nav" aria-label="Footer">
+    <ul>
+      @for (link of navLinks; track link) {
+        <li><a href="#">{{ link }}</a></li>
+      }
+    </ul>
+  </nav>
+
+  <ul class="footer__socials">
+    @for (s of socials; track s.label) {
+      <li>
+        <a href="#" [attr.aria-label]="s.label">
+          <span class="footer__icon" [style.--icon]="'url(' + s.icon + ')'"></span>
+        </a>
+      </li>
+    }
+  </ul>
+
+  <p class="attribution">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer">Frontend Mentor</a>.
+    Coded by
+    <a href="https://www.frontendmentor.io/profile/1t1sCooL" target="_blank" rel="noreferrer">1t1sCooL</a>.
+  </p>
+</footer>

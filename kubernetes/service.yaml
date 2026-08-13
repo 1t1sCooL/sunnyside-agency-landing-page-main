@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sunnyside-agency-landing-page-main
+  namespace: default
+spec:
+  selector:
+    app: sunnyside-agency-landing-page-main-app
+  ports:
+    - port: 80
+      targetPort: 80
+  type: ClusterIP
