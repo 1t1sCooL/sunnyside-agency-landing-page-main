@@ -61,7 +61,7 @@
   display: inline-block;
   font-family: "Fraunces", serif;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 15px !important;
   text-transform: uppercase;
   letter-spacing: -0.1px;
   color: var(--Grey-950) !important;
@@ -167,7 +167,6 @@
   .nav__contact {
     background-color: var(--Yellow-500);
     color: var(--Grey-950) !important;
-    font-size: 15px;
     padding: 16px 32px;
   }
 
